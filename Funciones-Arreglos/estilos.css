@@ -1,0 +1,19 @@
+*{
+    margin: 100;
+    padding: 100;
+}
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: crimson;
+    background-image: url("https://4.bp.blogspot.com/_xTdYxBySV4Y/TLnvfEnqbgI/AAAAAAAAARM/FLaCQTg1Ua8/s1600/homer-web-sitie.jpg");
+    background-size: 95%;
+}
+
+img{
+    border: 5px;
+    border-color: cyan;
+    border-style: inset;
+}
