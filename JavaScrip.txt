@@ -1,0 +1,470 @@
+// tipos de datos
+"gksfkgjkfj" esto es un string
+'ggfgfgfg' esto tambien es un string
+
+10000 //Numeros
+
+Verdadero o falos (true false) esto es boolean
+
+Muchos datos se llama Array ["pepe", "manuel"]
+
+Objeto 
+
+{
+"un nombre x, por ejemplo nombre de usuario":' un valor, por ejemplo NIcolas',
+"username": 'Nicolas',
+"horas": '14',
+"jugadorPrime": 'ture',
+}
+
+EXEMPLO DE UN OBJETO 
+console.log({"usuario":'Nicolas',
+"score":'70', "horas": '25.5', "jugadorPrime": 'ture',
+}
+
+
+https://docs.google.com/document/d/1IJKZXceynygoyV3RR4A36A-0xVykn8yZyNeGOgJlwgo/edit?usp=sharing ejerciios
+
+// Sección 2: Variables, tipos de datos y operadores\\
+
+Variable: es un espacio de memoria definida por mi
+tipos de datos: 
+1)numerico: enter, decimales  y de coma flotante 
+2)string: secuencia de caracteres , o texto 
+3)boolean: true o flase
+4)Undefined: no esta definido,  es una variable que como todavia no tiene ningun dato, javascript la va a definir 
+dinamicamente cuando reciba algun valor
+5)Null: datos que no existen
+
+
+typeof: me permite conocer el tipo de dato de una variable. ejemplo: console.log(typeof(nombre));
+resultado nombre STRING
+
+
+// con esass dos barras hago una comentario de una sola linea
+
+/* con eso hago una comentario
+ desde donde empiezo hasta donde 
+ termino usando este simbolo */
+
+operadores matematicos 
++  - /  *
+
+operadores logicos
+< > <= >= ==
+
+var mayorPalermo = !(edadPalermo > edadRoman); //// este ! es un operador de negacion( convierte en lo contrario un boolean...
+si era true entonces ahora es false
+
+operador de decremento(--) e incremento(++)
+
+hay que tenre cuidado donde se ubica por ejemplo: no es lo mismo console.log(++edadDePalermo),
+que poner console.log(edadDePalermo++)
+Resultado: en el primer ejemplo se va a mostrar en consola el valor de edadDePalermo + 1
+en el segundo ejemplo se va a nesesitar un nuevo console.log de la variable edadDePalermo para que se ve plasmado
+el resultado.
+
+
+operadores de Asignacion
++=, -=, *=, %=
+
+
+var edadRoman, edadPalermo, DiferenciaDeEdad;
+edadPalermo = 47;
+edadRoman = 43;
+
+var mayorPalermo = !(edadPalermo > edadRoman);
+console.log(mayorPalermo);
+
+edadRoman += edadPalermo;
+console.log(edadRoman)
+
+
+SENTENCIAS LOGICAS
+
+and (&&) 
+or (||)
+not (!)
+
+****************Sentencia switch***********
+
+var mes = 1;
+switch(mes){
+case 1:
+console.log(enero);
+break;
+case 2:
+console.log(febrero);
+break;
+case 3:
+console.log(marzo);
+break;
+case 4:
+console.log(abril);
+break;
+default:
+console.log("Mes no encontrado");
+}
+
+resultado es enero, pq va evaluando el case...si es 1 entonces enero 2 febrero, si fuera 10 se va por default y
+el resultaod seria "mes no encontrado".
+
+
+********************SENTENCIA FOR************
+
+es una sentencia que sirve para cerar un bucle que consiste de 3 expresiones opcionales
+for(var i=5; i <= 25; i+=5){
+    console.log(i);
+	
+aaca lo que estoy haciendo es poneiendo que i vale 5(var i=5;) y quiero que recorra el bucle hasta
+ que i sea menor o igual a 25(i <= 25;) y quiero que lo haga sumandole +5 a i empezando desde 5(i+=5)
+resultado:
+5
+10
+15
+20
+25 
+
+*******************Sentencia While*************
+
+
+esto es un bucle que se va a recorrer hasta que la condicion se cumpla, hay que ponerle un limite pq sino seria infinita
+var i = 10;
+while(i <= 50){
+    console.log(i++)
+}
+aca estoy diciendo que i vale 10 (i= 10;) y que mientras i sea menor o igual a 50(while(i <= 50), voy a mostrar
+en consola el valor de i +1 hasta llegar a 50 en este caso desde 10 hasta 50 ( console.log(i++)
+resultado
+10
+11
+12
+13
+14
+15
+...50
+
+*****************Funciones*********
+
+function mensaje(){
+ console.log("hola como te va")
+ }
+ mensaje()
+ 
+ aca estoy llmanado a la funcion mensaje (mensaje()  ), la cual logea en consola lo siguiente: "HOLA COMO TE VA"
+
+ ///////////////////////////
+ 
+ function mensaje(msj){
+    console.log(msj);
+}
+var msj = "mensaje como argumento de la funcion"
+mensaje(msj);
+
+aca estoy seteando parametros de la funcion mensaje desde afuera de la funcion ( var msj = "mensaje como argumento de la funcion")
+esa variable es el parametro de la funcion en este caso
+///////////////////////////////////////
+
+
+function mensaje(){
+    return "mensaje como devulucion de la funcion";
+}
+var msj = mensaje();
+console.log(msj)
+
+en este caso voy a usar la variable msj para luego usarla en un console.log...la variable msj= mensaje() llama a la funcion mensaje la cual retorna
+el valor "mensaje como devulucion de una funcion"
+//////////////////////////////////
+
+function sumar(a, b, c){
+    return a + b + c;
+}
+sumar();
+var result = sumar(5, 5, 5)
+console.log(result)
+aca estoy pasandole valores por medio de una variable (var result = sumar (5, 5, 5) a la funcion SUMAR (function sumar(a, b, c){
+eturn a + b + c; )
+de este modo el resultado es 15 ya que a b y c valen 5 cada una
+
+
+
+*****************************ARRAAAYYYYYYYYYYYYYYYYYYSSSSS***********************************************
+
+var nombres = ['Grover', 'Carlos', 'Ana', 'Luisa'];
+var vegetales = new Array('Tomate', 'Lechuga', 'Zanahoria');
+
+console.log(nombres); resultado = ['Grover', 'Carlos', 'Ana', 'Luisa']
+nombres.push('Pedro');  AGREGA UNO al final (resultado [ 'Grover', 'Carlos', 'Ana', 'Luisa', 'Pedro' ]
+console.log(nombres);
+nombres.unshift('Lili');
+console.log(nombres); agrega un dato al principio(resultado ['LiLI', 'Grover', 'Carlos', 'Ana', 'Luisa', 'Pedro' ]
+nombres.pop();
+console.log(nombres); borra el ultimo elemento (resultado [ 'Grover', 'Carlos', 'Ana', 'Luisa']
+nombres.shift();
+console.log(nombres); borra el primero (resultado ['Grover', 'Carlos', 'Ana', 'Luisa']
+
+var pos = nombres.indexOf('Carlos');
+console.log(pos); me meustra en que indice esta el nombre carlos
+grover 0
+carlos 1 es este
+ana 2
+luisa 3
+
+ 
+
+nombres.splice(1, 2); a partir de indice 1 borrar dos elementos 
+console.log(nombres); resultado: ["Grover", "Luisa"]
+
+
+*****************************HTML5-CONCEPTOS**************************
+<!DOCTYPE html>--------------------tipo de documento
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Curso Introducción a JavaScript</title> -----------------------titulo de la pagina ( es lo que aparece en la pestaña
+</head>
+<body>
+    <h1>HTML5 - Conceptos</h1> -------------------etiqueta encabezado o titulo, de h1 a h5 (tamaños) ( esto es importante para google asi los poscisiona)   
+       <table border="1"> -----------------aca estoy poniendole un borde(border="1") a la tabla que estoy creando (table)
+        <tr>------------------este comando es para agrear una fila a la tabla
+            <td>columna 1 --------------------- con TD voy agregandole los nombres a las filas
+                <td>columna 2
+                    <td>columna3</td>
+                </td>
+            </td>
+        </tr>
+        <td>dato 1
+            <td>dato 2
+                <td>dato 3</td>
+            </td>
+        </td>
+    </table>
+	<a href="http://wiki.w3itsolutions.net/"></a><br> ------------------ con esto agrego un enlace a un sitio web (<a href="") nota: la mayoria de las cosas las auto completa...............(con <br> le doy un enter como el de word para que la imagen no quede mal
+	<img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHjo11DxZP4DA/company-logo_200_200/0/1599521340191?e=1637798400&v=beta&t=CXVafbQd552413MI-hM5afo2Hvo7AsOkPES56uD3P-8" alt="BOQUEE"> ------------con img puedo pegar una imagen (el alt= es una descripcion en este caso "BOQUEE"
+       <ul>---------------------------------------UL sirve para armar un listado
+           <li>elemento 1</li> ----------------------------el Comando LI agrega elementos al listado en este caso el nombre es ELEMENTO 1
+           <li>elemento 2</li>
+           <li> elemento 3</li>
+       </ul>
+       <ol>------------------------------------------es para armar un listado pero ordenado, quedaria 1) ordenado 1, 2) ordenado dos ....( los enumera)
+           <li>ordenado 1</li>
+           <li>ordenado 2</li>
+           <li>ordenado 3</li>
+       </ol>
+	   
+	   <form action=""> -------------------------------------------------este comando es para crear formularios
+           <input type="text" name="" id=""> -----------------------------------con este comando estoy creando un cuadrado para ingresar texto dentro del formulario creado
+           <button>aceptar</button>----------------------------------------------------es un boton que dice aceptar dentro del mismo formulario
+       </form>
+   <script src="funciones.js"></script> -----------------aca le estoy diciendo a html que levante el archivo funciones.js 
+</html>
+
+
+
+nota: la mayoria de las cosas las auto completa tocando TAB
+
+
+
+***********************************************************CSS*****************************************************
+ESTE ES EL MISMO INDEX.HTML DE ARRIBA pero con el comando LINK para poder linkearlo a un archivo con formar .css en este caso el nombre del archivo es "estilos.css"
+es lo mismo que el src para linkear un archivo javascript
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Curso Introducción a JavaScript</title>
+    <link rel="stylesheet" href="estilos.css"> ------------------------------aca le estoy indicando al HTML que busque los estilos en el archivo "estilos.css"
+</head>
+<body>
+    <h1>HTML5 - Conceptos</h1>
+    <table border="1">
+        <tr>
+            <td>columna 1</td>
+            <td>columna 2</td>
+            <td>columna 3</td>
+        </tr>
+        <tr>
+            <td>dato 1</td>
+            <td>dato 2</td>
+            <td>dato 3</td>
+        </tr>
+       </table>
+       <a href="http://wiki.w3itsolutions.net/">WIKI W3</a><br>
+       <img src="https://media-exp1.licdn.com/dms/image/C4D0BAQHjo11DxZP4DA/company-logo_200_200/0/1599521340191?e=1637798400&v=beta&t=CXVafbQd552413MI-hM5afo2Hvo7AsOkPES56uD3P-8" alt="BOQUEE">
+       <ul>
+           <li>elemento 1</li>
+           <li>elemento 2</li>
+           <li> elemento 3</li>
+       </ul>
+       <ol>
+           <li>ordenado 1</li>
+           <li>ordenado 2</li>
+           <li>ordenado 3</li>
+       </ol>
+
+       <form action="">
+           <input type="text" name="" id="">
+           <button>aceptar</button>
+       </form>
+       <script src="funciones.js"></script>
+    </body>       
+</html>
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------ACA empieza el archivo estilos.css
+
+*{--------------------------------con ese simbolo asterisco, puedo decirle al .css que aplique detrminado parametro en TODOS LADOS
+    margin: 0;--------------------------------------margen de los elementos ....a que distancia del margen estan
+    padding: 0;
+}
+
+
+body{ ---------------------aca le estoy indicando que quiero usar estilos en el body del archivo index.HTML
+    font-family: Arial, Helvetica, sans-serif;-------------- aca estoy seteando una fuente para todo lo que esta dentro del body del archvio index.HTML
+    position: relative;----------------------aca le estoy indicando la posicion, en esta caso relativa de los elementos del html
+    color: crimson;----------el color de los elemntos del body...crimson es rojo o algo asi
+	background-image: url("https://4.bp.blogspot.com/_xTdYxBySV4Y/TLnvfEnqbgI/AAAAAAAAARM/FLaCQTg1Ua8/s1600/homer-web-sitie.jpg");--------------------------------con esto estoy poniendo una imagen de fondo de toda la pagina, por eso va en el body
+    background-size: 95%;-------------------tamaño del fondo de pantalla que le puse
+}
+
+img{----------------------------estoy indicando que quiero usar estilos en la imagen del archivo index.HTML
+    border: 5px; ------------------seteando un borde de 5px
+    border-color: cyan;-------------------------color del borde cyan es como turquesa
+    border-style: inset;----------------con esto creas un borde 3D del color que elegiste antes
+}
+
+
+
+
+nota: me auto completa los comandos con tab menos el de background-image: url
+
+
+
+*********************************************DOM******************************************** 
+
+
+es la estructura del htlm a medida que vamos creando un sitio
+va teniendo heads
+            meta
+			body
+			etc...
+			
+			
+			dentro del body hay etiquetas div( padre) y  como h1 ( el titulo, el elemento hijo).
+			
+			----------------------------------------------------------------------------------------------------------------------------------------
+			****************************************LLAMANDO AL HTML desde un javascrip******************
+			
+			
+			console.log(document.title); ------------------------------------con esto veo el titulo que puse entre los H1 en el HTML  
+var h1 = document.getElementsByTagName("h1"); --------------------------------con esta variable "H1" estoy pidiendo que con el comando getElementById con el argumento "h1" le estoy pidiendo que busque todos los "h1"
+h1[0].innerHTML = "prueba de html, css y javascrip";----------------------en este caso estoy pidiendo que la variable h1 en la posicion 0 ( en este caso es 0 pq tengo un solo h1 o TITULO entonces es la primera pos) se modifique por  "prueba de html, css y javascrip" usando innerHTML = "x"
+console.log(h1);-------------------------------aca estoy mostrando los resultados en la consola del navegador (en este caso en el archivo index.htlm voy a ver el titulo <h1>HTML5 - Conceptos</h1> pero en este console log voy a ver "prueba de html, css y javascrip"  en la consola del navegador
+var boton1 = document.getElementById("boton1")--------------------------en este caso le estoy creando una variable para manipular un boton en el html, lo voy a identificar con un ID que tengo que tambien setarlo en el propio HTML ( <button id="boton1">aceptar</button>)
+console.log(boton1);--------------------con este log estoy mostrando que el boton se vea en la consolo del navegador
+boton1.addEventListener("click", mensaje);-------------------------en este caso estoy agregando un evento al boton de tal manera que al darle "cklic" utilize la funcion mensaje, la cual esta espesificada mas abajo
+
+function mensaje(){---------------------funcion utilizada en el addEventListener
+    alert("holaaaaandaaaa")
+}
+
+
+
+**********************************APP CALCULADORA*****************************************
+Se crearon 3 archivos un html, un css y un javascrip 
+Clases: las clases dentro de un css sirven para agrupar cosas como botones y darles un estilo. ???? preguntar bien esto
+
+------------------------------------------------------------------HTML------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+    <title>Curso Introducción a JavaScript</title>
+    <link rel="stylesheet" href="estilosCalc.css">----------------------link al css
+</head>
+<body>
+
+    <div class="calculadora-grilla">----------------------------------------------------------------------------aca estoy diciendole al html que hay una nueva clase que se llama calculadora.grilla ( la estoy llamando desde estilosCalc.css)
+        <div class="output">---------------------------------otra clase como la de arriba ( cada clase tiene sus propios estilos o parametros como color, tamaños y lalala)
+            <input class="display" type="text" name="" id="result" placeholder="0"> -------------------------aca estoy agregando la class display diciendo que es un campo de tipo texto, sin parametro nombre, con la id "result"( esto me va a servir para idetificarlo y una cajita para escribir (seria el placeholder con el valor 0)
+        </div>------------------------ abajo de esto empiezo a agregar los botones de la calculadora
+
+
+       <button name="botones-numericos" >1</button>-----------------botones (todos los numeros, borrar, igual y los simbolos +, -, *, /)
+        <button name="botones-numericos">2</button>
+        <button name="botones-numericos">3</button>
+        <button name="botones-simbolos" >+</button>
+        <button name="botones-numericos">4</button>
+        <button name="botones-numericos">5</button>
+        <button name="botones-numericos">6</button>
+        <button name="botones-simbolos">-</button>
+        <button name="botones-numericos">7</button>
+        <button name="botones-numericos">8</button>
+        <button name="botones-numericos">9</button>
+        <button name="botones-simbolos">/</button>
+        <button name="botones-borrar">C</button>
+        <button name="botones-numericos">0</button>
+        <button name="botones-igual">=</button>
+        <button name="botones-simbolos">x</button>
+
+    </div>
+
+       <script src="DomCalc.js"></script>---------------------------------aca estoy linkeando un archivo .js al html
+    </body>       
+</html>
+
+
+------------------------------------------------------------------------------------------------------------------------------CSS----------------------------------------------------------------------------------
+
+se van usando parametro como margin que seria el margen para modificar el aspecto de un html
+se pueden usar CLASES. esto es para por ejemplo en el caso del la clase .calculadroa-grilla y si parametro display: grid para dibujar una grilla de filas y columnas,
+la cual es definida en grid-template-columns y grid-template-rows
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+.calculadora-grilla {--------------------clase
+    display: grid;-------------la grilla
+    justify-content: center;--------------------no se
+    align-content: center;--------------------------no estoy seguro
+    min-height: 100vh;-----------------------------adios
+    grid-template-columns: repeat(4, 100px);--------------------------------cantidad de columnas y tamño
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);----------------cantidad de filas y tamaño ( cuando lo veo en el front parece tener 6 en vez de 5)
+}
+
+.calculadora-grilla > button {------------------aca estoy llamando a la clase grilla y dentro de la calse grilla a la clase button: esta clase va a llamar a todos los <button></button> para darles el mismo estilo
+    cursor: pointer;--------------------------el cursor es una manito
+    font-size: 2rem;--------------tamaño de los numeros de la calculadora
+    border: 1px solid white; 
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.output {
+    grid-column: 1 / -1;--------------con este comando y esos parametros ( grid-column: 1 / -1) le estoy diciendo a la calse output que ponga todos los estilos colores y cosas locas dentro de toda las 4 columnas ( el -1 es sinonimo de abaracr todo el largo de las columnas no importa cuantas sean )
+    background-color: rgba(0, 0, 0, .75);-------------------------color de fondo solo de las columnas seleccionadas 
+    display: flex;-
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all; 
+}
+
+.output .display {
+    color: black;
+    font-size: 1.85rem;
+    text-align: right;
+}
+
+.calculadora-grilla > button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
