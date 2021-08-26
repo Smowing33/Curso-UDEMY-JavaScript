@@ -1,0 +1,36 @@
+
+Login admin pastoral digital (ambiente Desa-TEST)
+http://desa.w3itsolutions.net:84/client/mod/portal/login/sson.php?redirect=http%3A%2F%2Fdesa.w3itsolutions.net%3A5042%2Fcalendar
+
+User iciampichetti
+Pass ivana123
+
+ horarios de los turnos viernes 16.00 y las 18.00
+ horario turnos sabado  domingo 08.00 a 16.00
+
+
+http://desa.w3itsolutions.net:5051/ TEST
+
+http://desa.w3itsolutions.net:5042/calendar ambiente de test sin logearse (turnero
+
+https://adminturnos.pastoraldigital.com/calendar?fromlogin=1 PRODUCCION admin
+
+https://turnos.pastoraldigital.com/ TURNERO Admin
+
+
+probar si hago 5 clicks no me mande 5 mails
+
+probar que las expiradas o canceladas vuelvan a verse como slots disponibles
+
+cerrar el ultimo banner cuando elegis los ministros al final ( despues de tocar el boton enviar a pstoral digital debe ceerarse y mostrar un mensaje de exito
+
+
+no ver ningun bautismo sin datos /( NUL NULL
+
+
+en el count de admin en el slot de cada hora, no mostrar los bautismos cancelados eje
+
+
+
+git remote add origin git@github.com:git@github.com:Smowing33/Tutorial-git.git
+git remote set-url origin git@github.com:Smowing33/Tutorial-git.git
